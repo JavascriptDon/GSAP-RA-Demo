@@ -9,16 +9,16 @@ const Hero = () => {
     const isMobile = useMediaQuery({maxWidth: 767});
 
     useGSAP(()=> {
-        const heroSplit = new SplitText('.title', {type: 'chars,words'});
+      //  const heroSplit = new SplitText('.title', {type: 'chars,words'});
         const paraSplit = new SplitText('.subtitle', {type: 'lines'});
         
-        heroSplit.chars.forEach((char) => char.classList.add('text-gradient'));
+     /*   heroSplit.chars.forEach((char) => char.classList.add('text-gradient'));
         gsap.from(heroSplit.chars, {
             yPercent: 100,
             duration: 1.8,
             ease: 'expo.out',
             stagger: 0.06
-        });
+        });*/
 
         gsap.from(paraSplit.lines,{
             opacity: 0,
@@ -60,8 +60,6 @@ const Hero = () => {
   return (
     <>
     <section id="hero" className='noisy'>
-        <h1 className='title'>CAD</h1>
-
         <div className='body'>
             <div className='content'>
                 <div className='space-y-5 hidden md:block'>
