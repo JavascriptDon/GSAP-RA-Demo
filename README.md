@@ -39,3 +39,7 @@ Use the code below to add a key frame to the video every 30 seconds:
 `ffmpeg -i input.mp4 -vf "scale=960:-2" -movflags faststart -c:v libx264 -crf 20 -g 30 -pix_fmt yuv420p -c:a aac -b:a 128k output.mp4` 
 
 ## Preview
+
+https://github.com/user-attachments/assets/604920dd-6964-4972-9c6b-96ab888a33ad
+
+
