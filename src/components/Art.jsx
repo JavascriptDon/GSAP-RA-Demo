@@ -30,20 +30,20 @@ const Art = () => {
   return (
     <div id="art">
         <div className='container mx-auto h-full pt-20'>
-            <h2 className='will-fade'>XR</h2>
+            <h2 className='will-fade'>The CAD</h2>
+
             <div className='content'>
                 <div className='cocktail-img'>
-                    <img src="https://placehold.co/600x400" alt="cocktail" className='abs-center masked-img size-full object-contain'/>
-                    
-                </div>
+                    <img src="/images/pump-ipc.png" alt="cocktail" className='abs-center masked-img size-full object-contain'/>
 
+                </div>
             </div>
 
             <div className='masked-container'>
-                <h2 className='will-fade pt-20'>Dummy Text</h2>
+                <h2 className='will-fade pt-30'>Illustrated Parts Catalog</h2>
                 <div id="masked-content">
-                    <h3>Industrial Mixed Reality Technology  </h3>
-                    <p>Live Demonstration</p>
+                    <h3>Pump IPC Parts Catalog</h3>
+                    <p>Check it out live <a href="https://demo.cortona3d.com/?demopath_request=..%2Fdemoset%2FPUMP__IPC_GENERIC_IPC_EN%2Fplugin_free%2FPUMP__IPC_GENERIC_IPC.cortona3d" className='font-bold'>here</a>!</p>
                 </div>
             </div>
         </div>
