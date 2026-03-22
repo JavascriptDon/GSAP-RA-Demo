@@ -43,7 +43,7 @@ const Art = () => {
                 <h2 className='will-fade pt-30'>Illustrated Parts Catalog</h2>
                 <div id="masked-content">
                     <h3>Pump IPC Parts Catalog</h3>
-                    <p>Check it out live <a href="https://demo.cortona3d.com/?demopath_request=..%2Fdemoset%2FPUMP__IPC_GENERIC_IPC_EN%2Fplugin_free%2FPUMP__IPC_GENERIC_IPC.cortona3d" className='font-bold'>here</a>!</p>
+                    <p>Check it out live <a href="https://demo.cortona3d.com" className='font-bold'>here</a>!</p>
                 </div>
             </div>
         </div>
