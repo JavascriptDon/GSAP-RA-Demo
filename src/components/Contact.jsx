@@ -37,13 +37,13 @@ const Contact = () => {
 
         if (cta) {
             gsap.from(cta, {
-                scrollTrigger: { trigger: cta, start: "top 90%" },
+                scrollTrigger: { trigger: cta, start: "top 89%" },
                 opacity: 0,
                 y: 20,
                 duration: 0.7,
                 ease: "power2.out",
                 delay: 0.2,
-                onComplete: () => gsap.set(cta, { clearProps: "all" }),
+                clearProps: "all",
             });
         }
     });
