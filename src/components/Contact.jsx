@@ -43,7 +43,7 @@ const Contact = () => {
                 duration: 0.7,
                 ease: "power2.out",
                 delay: 0.2,
-                clearProps: "all",
+                onComplete: () => gsap.set(cta, { clearProps: "all" }),
             });
         }
     });
