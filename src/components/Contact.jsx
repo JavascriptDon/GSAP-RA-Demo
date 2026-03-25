@@ -25,6 +25,7 @@ const Contact = () => {
                 stagger: 0.025,
                 duration: 1,
                 ease: 'expo.out',
+                clearProps: 'all',
             });
         });
 
@@ -35,6 +36,7 @@ const Contact = () => {
                 y: 20,
                 duration: 0.7,
                 ease: 'power2.out',
+                clearProps: 'all',
             });
         });
 
@@ -45,6 +47,7 @@ const Contact = () => {
             duration: 0.7,
             ease: 'power2.out',
             delay: 0.2,
+            clearProps: 'all',
         });
 
         gsap.from(img, {
@@ -53,11 +56,17 @@ const Contact = () => {
             x: 60,
             duration: 1.2,
             ease: 'power3.out',
+            clearProps: 'all',
         });
     });
 
     return (
         <section id="contact" ref={sectionRef}>
+            <img
+                src="/images/pump-ipc.png"
+                alt="3D parts catalog preview"
+                className='drink-img'
+            />
 
             <div className='content'>
                 <div>
