@@ -5,6 +5,8 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Features from './components/Features';
 import Art from './components/Art';
+import About from './components/About';
+import Contact from './components/Contact';
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
 const App = () => {
@@ -13,11 +15,11 @@ const App = () => {
         <Navbar/>
         <Hero/>
         <Features/>
+        <About/>
         <Art/>
+        <Contact/>
     </main>
   )
 }
 
 export default App
-
-/*<div className='h-dvh bg-black' /> */

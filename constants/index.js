@@ -1,8 +1,20 @@
 export const navLinks = [
- {
-	id: "",
-	title: "",
- },
+  {
+    id: "cocktails",
+    title: "Features",
+  },
+  {
+    id: "about",
+    title: "About",
+  },
+  {
+    id: "art",
+    title: "Catalog",
+  },
+  {
+    id: "contact",
+    title: "Demo",
+  },
 ];
 
 
@@ -27,19 +39,19 @@ export const rapidAuthorFeatureDetails = [
 ];
 
 export const rapidAuthorToolSet = [
-	"Rapid Manual",
-	"Rapid Text",
-	"Rapid Catalog",
-	"Rapid Work Instruction",
-	"Rapid Illustrator",
-	"Rapid Learning",
+        "Rapid Manual",
+        "Rapid Text",
+        "Rapid Catalog",
+        "Rapid Work Instruction",
+        "Rapid Illustrator",
+        "Rapid Learning",
 ]
 
 export const rapidAuthorPurpose=[
-	"Create interactive manuals with 2D/3D visuals and procedure text.",
-	"XML editor for front matter, cover pages, and structured content.",
-	"Build 3D illustrated parts catalogs for accurate spare part ordering.",
-	"Design interactive work instructions and job cards.",
-	"Develop standalone 3D interactive graphics.",
-	"Create 3D training applications compatible with LMS platforms.",
+        "Create interactive manuals with 2D/3D visuals and procedure text.",
+        "XML editor for front matter, cover pages, and structured content.",
+        "Build 3D illustrated parts catalogs for accurate spare part ordering.",
+        "Design interactive work instructions and job cards.",
+        "Develop standalone 3D interactive graphics.",
+        "Create 3D training applications compatible with LMS platforms.",
 ]

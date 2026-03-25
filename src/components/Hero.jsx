@@ -9,79 +9,89 @@ const Hero = () => {
     const isMobile = useMediaQuery({maxWidth: 767});
 
     useGSAP(()=> {
-      //  const heroSplit = new SplitText('.title', {type: 'chars,words'});
-        const paraSplit = new SplitText('.subtitle', {type: 'lines'});
-        
-     /*   heroSplit.chars.forEach((char) => char.classList.add('text-gradient'));
-        gsap.from(heroSplit.chars, {
-            yPercent: 100,
-            duration: 1.8,
-            ease: 'expo.out',
-            stagger: 0.06
-        });*/
+        document.fonts.ready.then(() => {
+            const heroSplit = new SplitText('.title', { type: 'chars' });
+            const paraSplit = new SplitText('.subtitle', { type: 'lines' });
 
-        gsap.from(paraSplit.lines,{
-            opacity: 0,
-            yPercent: 100,
-            duration: 1.8,
-            ease: 'expo.out',
-            stagger: 0.06,
-            delay: 1,
+            heroSplit.chars.forEach((char) => char.classList.add('text-gradient'));
+
+            gsap.from(heroSplit.chars, {
+                yPercent: 100,
+                duration: 1.8,
+                ease: 'expo.out',
+                stagger: 0.06,
+            });
+
+            gsap.from(paraSplit.lines, {
+                opacity: 0,
+                yPercent: 100,
+                duration: 1.8,
+                ease: 'expo.out',
+                stagger: 0.06,
+                delay: 0.8,
+            });
         });
 
-   	gsap.timeline({
-	 scrollTrigger: {
-		trigger: "#hero",
-		start: "top top",
-		end: "bottom top",
-		scrub: true,
-	 },
-	})
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: "#hero",
+                start: "top top",
+                end: "bottom top",
+                scrub: true,
+            },
+        }).to('.title', {
+            yPercent: -20,
+            opacity: 0,
+            ease: 'none',
+        });
 
-    const startValue = isMobile ? 'top 50%' : 'center 60%';
-    const endValue = isMobile ? '120% top' : 'bottom top';
+        const startValue = isMobile ? 'top 50%' : 'center 60%';
+        const endValue   = isMobile ? '120% top' : 'bottom top';
 
-    const tl = gsap.timeline({
-    scrollTrigger: {
-        trigger: "video",
-        start: startValue,
-        end: endValue,
-        scrub: true, // ties the animation progress to scroll
-        pin: true, // keeps the video in-place. 
-    },
-    });
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: "video",
+                start: startValue,
+                end: endValue,
+                scrub: true,
+                pin: true,
+            },
+        });
 
-    // Animate the video: scale and fade
-    videoRef.current.onloadedmetadata = () => {
-        tl.to(videoRef.current , {
-            currentTime: videoRef.current.duration
-    })}
-},[])
-  return (
-    <>
-    <section id="hero" className='noisy'>
-        <div className='body'>
-            <div className='content'>
-                <div className='space-y-5 hidden md:block'>
-                    <p>Powerful. Flexible. Efficient.</p>
-                    <p className='subtitle'>Deliver Better Docs</p>
-                </div>
+        videoRef.current.onloadedmetadata = () => {
+            tl.to(videoRef.current, {
+                currentTime: videoRef.current.duration,
+            });
+        };
+    }, [])
 
-                <div className='view-cocktails'>
-                    <p className='subtitle'>
-                    Rapid Author improves documentation quality and efficiency by reusing CAD or PLM XML data for manuals, work instructions, and training materials.
-                    </p>
-                    <a href="https://demo.cortona3d.com/">Learn More</a>
+    return (
+        <>
+        <section id="hero" className='noisy'>
+            
+
+            <div className='body'>
+                <div className='content'>
+                    <div className='space-y-5 hidden md:block'>
+                        <p>Powerful. Flexible. Efficient.</p>
+                        <p className='subtitle'>Deliver Better Docs</p>
+                    </div>
+
+                    <div className='view-cocktails'>
+                        <p className='subtitle'>
+                            Rapid Author improves documentation quality and efficiency by reusing CAD or PLM XML data for manuals, work instructions, and training materials.
+                        </p>
+                        <a href="https://demo.cortona3d.com/">Learn More</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <div className='video absolute inset-0'>
-        <video ref={videoRef} src="./videos/output.mp4" muted playsInline preload='auto'/>
-    </div>
-    </>
-  )
+        <div className='video absolute inset-0'>
+            <video ref={videoRef} src="./videos/output.mp4" muted playsInline preload='auto'/>
+        </div>
+        </>
+    )
 }
 
 export default Hero
