@@ -11,7 +11,6 @@ const Contact = () => {
 
         const heading = section.querySelector(".contact-heading");
         const subItems = section.querySelectorAll(".contact-sub");
-        const cta = section.querySelector(".contact-cta");
 
         if (heading) {
             gsap.from(heading, {
@@ -34,18 +33,6 @@ const Contact = () => {
                 clearProps: "all",
             });
         });
-
-        if (cta) {
-            gsap.from(cta, {
-                scrollTrigger: { trigger: cta, start: "top 89%" },
-                opacity: 0,
-                y: 20,
-                duration: 0.7,
-                ease: "power2.out",
-                delay: 0.2,
-                clearProps: "all",
-            });
-        }
     });
 
     return (
