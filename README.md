@@ -7,7 +7,7 @@ A Rapid Author landing page developed using ReactJS, tailwindcss  and react-resp
 1. Clone the repository.
 
 ```
-git clone https://github.com/JavascriptDon/GSAP-Mojito-Demo.git
+git clone https://github.com/JavascriptDon/GSAP-RA-Demo.git
 ```
 
 2. Install dependencies:
